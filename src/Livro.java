@@ -12,14 +12,26 @@ public class Livro {
     }
 
     public void exibirDetalhes(){
-
+        System.out.println("Título: "+titulo);
+        System.out.println("Autor: "+autor);
+        System.out.println("O livro tem " +numeroPagina+ " páginas.");
+        System.out.println("Disponibilidade: "+disponibilidade);
     }
 
-    public void reservar(){
-
+    public void reservar(String titulo){
+        if (disponibilidade == true ){
+            System.out.println("\nLivro disponível para locar!\n");
+        } else{
+            System.out.println(titulo+" está locado!\n");
+        }
     }
 
-    public void devolver(){
-        
+    public void devolver(String titulo, boolean disponibilidade){
+        System.out.println(titulo+" está disponível para locar novamente!");
+        this.disponibilidade = true;
+    }
+
+    public boolean isDisponivel() {
+        return disponibilidade;
     }
 }
