@@ -26,8 +26,13 @@ public class Livraria {
 
         System.out.println("Livros disponíveis");
         for (Livro livro : livros){
-            System.out.println(livros);
-            livrosDisp = true;
+            if (livro.isDisponivel()){
+                System.out.println(livro);
+                livrosDisp = true;
+            }
+        }
+        if (!livrosDisp){
+            System.out.println("Nenhum livro disponível para locar.");
         }
     }
 
