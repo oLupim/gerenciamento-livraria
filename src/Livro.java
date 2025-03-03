@@ -34,4 +34,10 @@ public class Livro {
     public boolean isDisponivel() {
         return disponibilidade;
     }
+
+    @Override
+    public String toString() {
+        return "Título: " + titulo + ", Autor: " + autor + ", Disponível: " + (disponibilidade ? "Sim" : "Não");
+    }
+
 }
